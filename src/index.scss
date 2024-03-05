@@ -1,0 +1,8 @@
+@import './assets/scss/base/reset';
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color-scheme: dark;
+  color: $text-color;
+  background-color: $background-color;
+}

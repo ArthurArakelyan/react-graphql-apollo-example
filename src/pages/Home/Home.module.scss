@@ -1,0 +1,15 @@
+.home {
+  width: 100%;
+  @include flex(column, center, center);
+}
+
+.home__content {
+  max-width: 50rem;
+  width: 100%;
+  @include flex(column, center, center);
+}
+
+.home__title {
+  line-height: 2.5rem;
+  @include font(2rem, 700, $text-color, center);
+}

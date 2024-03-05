@@ -1,0 +1,53 @@
+.button {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+  letter-spacing: 0.05rem;
+  background-color: $primary-color;
+  @include font(1rem, 500, $text-color, center);
+  @include flex(row, center, center);
+  transition: background-color .2s ease, box-shadow .2s ease, opacity .2s ease;
+
+  &--loading {
+    .button__content {
+      opacity: 0;
+    }
+  }
+
+  &:not(:disabled) {
+    @include hover() {
+      background-color: $primary-color-hover;
+      box-shadow: 0 0 0.313rem var(--shadow-md-color);
+    }
+
+    @include active() {
+      box-shadow: 0 0 0.35rem var(--shadow-lg-color);
+    }
+  }
+
+  &:not(&--loading):disabled {
+    .button__content {
+      opacity: 0.6;
+    }
+  }
+
+  &:disabled {
+    cursor: default;
+    background-color: $primary-color-600;
+  }
+}
+
+.button__content {
+  opacity: 1;
+  @include flex(row, center, center);
+  transition: opacity .2s ease;
+}
+
+.button__loader {
+  position: absolute;
+  color: $white;
+}

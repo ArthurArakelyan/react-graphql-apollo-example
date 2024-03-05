@@ -1,0 +1,35 @@
+.checkbox {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+  background-color: transparent;
+  border: 2px solid #626465;
+  cursor: pointer;
+  @include flex(row, center, center);
+  transition: border-color .2s ease, background-color .2s ease;
+
+  &:disabled {
+    border-color: #BDBDBD !important;
+    cursor: default;
+  }
+
+  &[aria-checked="true"] {
+    background-color: #1976D2;
+    border-color: #1976D2;
+
+    &:disabled {
+      background-color: #BDBDBD !important;
+    }
+
+    .checkbox__mark {
+      fill: #ffffff;
+    }
+  }
+}
+
+.checkbox__mark {
+  position: absolute;
+  fill: transparent;
+  transition: fill .2s ease;
+}

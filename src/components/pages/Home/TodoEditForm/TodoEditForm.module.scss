@@ -1,0 +1,50 @@
+.todo-edit-form {
+  width: 100%;
+  @include flex(row, center, center);
+}
+
+.todo-edit-form__input {
+  flex: 1;
+  margin-right: 1rem;
+  padding: 0.75rem;
+}
+
+.todo-edit-form__actions {
+  gap: 1rem;
+  margin-left: auto;
+  @include flex(row, center, flex-end);
+}
+
+.todo-edit-form__action {
+  width: 1.25rem;
+  height: 1.25rem;
+  padding: 0;
+  border: none;
+  background: transparent;
+  @include flex(row, center, center);
+
+  &:disabled {
+    cursor: default;
+  }
+
+  &:not(:disabled) {
+    @include hover() {
+      svg {
+        filter: drop-shadow(0 0 0.4rem $white);
+      }
+    }
+  }
+
+  &--cancel {
+    svg {
+      stroke: $white;
+    }
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+    fill: $white;
+    transition: filter .2s ease;
+  }
+}

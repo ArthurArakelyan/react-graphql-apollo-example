@@ -1,0 +1,14 @@
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  letter-spacing: 0.025rem;
+  border: 0.063rem solid $border-color;
+  border-radius: 0.25rem;
+  outline: none;
+  @include font(1rem, 400);
+  transition: border-color .2s ease;
+
+  &:focus {
+    border-color: $primary-color;
+  }
+}

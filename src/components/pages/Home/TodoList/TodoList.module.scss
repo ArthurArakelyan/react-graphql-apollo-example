@@ -1,0 +1,6 @@
+.todo-list {
+  margin-top: 2rem;
+  width: 100%;
+  gap: 1.25rem;
+  @include flex(column, center, center);
+}

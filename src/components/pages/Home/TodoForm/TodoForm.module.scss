@@ -1,0 +1,20 @@
+.todo-form-wrapper {
+  width: 100%;
+  @include flex(column, flex-start, center);
+}
+
+.todo-form {
+  margin-top: 3rem;
+  width: 100%;
+  @include flex(row, center, center);
+}
+
+.todo-form__input {
+  flex: 1;
+  margin-right: 1.5rem;
+}
+
+.todo-form__error {
+  margin-top: 1rem;
+  @include font(1rem, 400, $error-color);
+}

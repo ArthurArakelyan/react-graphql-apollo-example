@@ -1,0 +1,8 @@
+.fetch-error {
+  gap: 1.5rem;
+  @include flex(column, center, center);
+}
+
+.fetch-error__message {
+  @include font(1.5rem, 700, $error-color, center);
+}
