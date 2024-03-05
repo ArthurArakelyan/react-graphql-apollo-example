@@ -1,6 +1,10 @@
 # React GraphQL Apollo Example
 
-A simple To-Do list example created with React and Apollo to showcase the work with GraphQL.
+A simple To-Do list example created with React and Apollo.
+
+The GraphQL server is made with [json-graphql-server](https://github.com/marmelab/json-graphql-server) library.
+
+![image](https://github.com/ArthurArakelyan/react-graphql-apollo-example/assets/71519856/c06eb26d-2c63-428b-99fd-74fd00745374)
 
 ## Project setup
 
